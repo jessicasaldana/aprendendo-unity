@@ -12,18 +12,25 @@ public class Player : MonoBehaviour
 
     private float initialSpeed;
     private bool _isRunning;
+    private bool _isRolling;
     private Vector2 _direction;
 
-    public Vector2 direction
+    public bool isRolling
     {
-        get { return _direction; }
-        set { _direction = value; }
+        get { return _isRolling; }
+        set { _isRolling = value; }
     }
 
     public bool isRunning
     {
         get { return _isRunning; }
         set { _isRunning = value; }
+    }
+
+    public Vector2 direction
+    {
+        get { return _direction; }
+        set { _direction = value; }
     }
 
     void Start() // Start is called before the first frame update
@@ -36,6 +43,7 @@ public class Player : MonoBehaviour
     {
         OnInput();
         OnRun();
+        OnRolling();
     }
 
     private void FixedUpdate()
@@ -67,6 +75,21 @@ public class Player : MonoBehaviour
         {
             speed = initialSpeed;
             _isRunning = false;
+        }
+    }
+
+    void OnRolling()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            speed = runSpeed;
+            _isRolling = true;
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            speed = initialSpeed;
+            _isRolling = false;
         }
     }
 
