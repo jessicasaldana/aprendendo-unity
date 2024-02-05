@@ -14382,6 +14382,55 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &429359032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429359034}
+  - component: {fileID: 429359033}
+  m_Layer: 0
+  m_Name: DialogueControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &429359033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429359032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e561d01c592e49940b297cd9cd6e28ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObj: {fileID: 0}
+  profileSprite: {fileID: 0}
+  speechText: {fileID: 0}
+  actorNameText: {fileID: 0}
+  typingSpeed: 0
+--- !u!4 &429359034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429359032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3607061, y: 1.3487709, z: 0.17517057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &442133819
 GameObject:
   m_ObjectHideFlags: 0
@@ -15717,7 +15766,7 @@ GameObject:
   - component: {fileID: 1492339193}
   - component: {fileID: 1492339192}
   - component: {fileID: 1492339194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15895,6 +15944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1823514778}
   - component: {fileID: 1823514777}
+  - component: {fileID: 1823514779}
   m_Layer: 0
   m_Name: NPC_1
   m_TagString: Untagged
@@ -15930,7 +15980,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823514776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.71, y: 3.8, z: 0}
+  m_LocalPosition: {x: 3.88, y: 2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15939,6 +15989,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823514779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823514776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e94e8273e17c674498a412dffa0456e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueRange: 1.5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1994526060
 GameObject:
   m_ObjectHideFlags: 0
