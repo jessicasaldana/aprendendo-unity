@@ -15,10 +15,19 @@ public class DialogueControl : MonoBehaviour
     public float typingSpeed; //velocidade da fala
 
     // Variaveis de controle
-    private bool isShowing; //se a janela está visivel
-    private int index; //index das sentenças
+    private bool isShowing; //se a janela estï¿½ visivel
+    private int index; //index das sentenï¿½as
     private string[] sentences; // recebe as falas do npc
 
+    public static DialogueControl instance;
+
+    // Awake Ã© chamado antes de todos os Start() na hierarquia de execuÃ§Ã£o de scripts
+    private void Awake()
+    {
+        instance = this;
+    }
+    
+    // Chamado uma vez ao inicializar
     void Start()
     {
         

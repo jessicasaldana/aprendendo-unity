@@ -32,13 +32,14 @@ public class Languages
     public string spanish;
 }
 
-// Bot„o de criaÁ„o de dialogo no inspector
+// Bot√£o de cria√ß√£o de dialogo no inspector
 #if UNITY_EDITOR
 [CustomEditor(typeof(DialogueSettings))]
 public class BuilderEditor : Editor
 {
     public override void OnInspectorGUI()
     {
+        DrawDefaultInspector();
         base.OnInspectorGUI();
 
         DialogueSettings ds = (DialogueSettings)target;
